@@ -98,8 +98,16 @@ function showSummaryPane() {
   document.getElementById("summary-pane").style.display = "block";
   backBtn.hidden = true;
   flagBtn.hidden = true;
+  nextBtn.hidden = true;
 
   summaryPane.innerHTML = `<h2>Summary</h2>`;
+
+  const submitButton = document.createElement("button");
+  submitButton.innerHTML = "Submit";
+  submitButton.onclick = function () {
+    document.getElementById("summary-pane").style.display = "none";
+    showResults();
+  };
 
   questionArr.forEach((question, index) => {
     const questionElement = document.createElement("div");
@@ -113,6 +121,9 @@ function showSummaryPane() {
       summaryPane.appendChild(answerElement);
     }
   });
+
+  // creates submit button
+  summaryPane.appendChild(submitButton);
 }
 
 // show results
