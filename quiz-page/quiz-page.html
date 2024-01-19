@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="quiz-page.css" />
+  </head>
+  <body>
+    <div id="quiz-container">
+      <div id="question1" class="question-container active">
+        <h2>Question 1</h2>
+        <p>What is the capital of France?</p>
+        <input type="radio" name="q1" value="Correct" id="Paris" /> Paris
+        <input type="radio" name="q1" value="Berlin" /> Berlin
+        <input type="radio" name="q1" value="London" /> London
+      </div>
+
+      <div id="question2" class="question-container">
+        <h2>Question 2</h2>
+        <p>What is the largest planet in our solar system?</p>
+        <input type="radio" name="q2" value="Mars" /> Mars
+        <input type="radio" name="q2" value="Correct" id="Jupiter" /> Jupiter
+        <input type="radio" name="q2" value="Earth" /> Earth
+      </div>
+
+      <div id="question3" class="question-container">
+        <h2>Question 3</h2>
+        <p>Who wrote 'Romeo and Juliet'?</p>
+        <input type="radio" name="q3" value="Correct" id="Wiliam Shakespeare" />
+        William Shakespeare
+        <input type="radio" name="q3" value="Charles Dickens" /> Charles Dickens
+        <input type="radio" name="q3" value="Jane Austen" /> Jane Austen
+      </div>
+
+      <div id="result-container">
+        <h2>Quiz Results</h2>
+        <p id="score">Your score: <span id="result">0</span>/3</p>
+      </div>
+
+      <button id="back-btn" onclick="showPreviousQuestion()">Back</button>
+      <button id="next-btn" onclick="showNextQuestion()">Next</button>
+    </div>
+
+    <script src="quiz-page.js"></script>
+  </body>
+</html>
