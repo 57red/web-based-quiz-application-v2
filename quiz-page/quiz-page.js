@@ -37,24 +37,13 @@ function showNextQuestion() {
 
   currentQuestion++;
 
-  if (currentQuestion > 3) {
+  if (currentQuestion > 10) {
     showSummaryPane();
-    // showResults();
   } else {
     document
       .getElementById(`question${currentQuestion}`)
       .classList.add("active");
   }
-
-  // if (selectedAnswer) {
-  //   // console.log("Selected Answer ID:", selectedAnswer.id);
-  //   console.log("Question: ", question);
-  //   console.log("Arr of questions:", questionArr);
-  //   console.log("Selected Answer Text:", answer);
-  //   console.log("Arr of answers: ", answerArr);
-  // } else {
-  //   console.log("No answer selected for the current question.");
-  // }
 }
 
 // show previous question
@@ -64,6 +53,7 @@ function showPreviousQuestion() {
   document
     .getElementById(`question${currentQuestion}`)
     .classList.remove("active");
+
   currentQuestion--;
 
   if (currentQuestion < 1) {
@@ -129,7 +119,7 @@ function showSummaryPane() {
 // show results
 function showResults() {
   // gets total grade of quiz
-  let grade = (score * 100) / 3;
+  let grade = (score * 100) / 10;
 
   document.getElementById("result-container").style.display = "block";
   document.getElementById("result").innerText = score;

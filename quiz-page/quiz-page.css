@@ -19,7 +19,7 @@ body {
 
 .question-container {
   padding: 20px;
-  text-align: center;
+  text-align: left;
   display: none;
 }
 
@@ -57,4 +57,12 @@ button {
 
 #back-btn {
   float: left;
+}
+
+input {
+  cursor: pointer;
+}
+
+.choice {
+  width: auto;
 }
