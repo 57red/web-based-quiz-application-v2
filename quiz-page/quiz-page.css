@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #fff5c2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@ body {
 
 #quiz-container {
   max-width: 600px;
-  background-color: #fff;
+  background-color: #f4f27e;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;

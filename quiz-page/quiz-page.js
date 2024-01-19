@@ -8,16 +8,25 @@ let score = 0;
 let answerArr = [];
 let questionArr = [];
 
+// show next question
 function showNextQuestion() {
   const selectedAnswer = document.querySelector(
     `input[name="q${currentQuestion}"]:checked`
   );
 
+  // name of the answer and question
+  let answer = selectedAnswer.id;
+  let question = document
+    .getElementById(`question${currentQuestion}`)
+    .getElementsByTagName("p")[0].innerText;
+
+  // checks the answer if it's correct
   checkAnswer();
 
   document
     .getElementById(`question${currentQuestion}`)
     .classList.remove("active");
+
   currentQuestion++;
 
   if (currentQuestion > 3) {
@@ -28,11 +37,13 @@ function showNextQuestion() {
       .classList.add("active");
   }
 
-  let answer = selectedAnswer.id;
+  answerArr.push(answer);
 
   if (selectedAnswer) {
     // console.log("Selected Answer ID:", selectedAnswer.id);
+    console.log("Question: ", question);
     console.log("Selected Answer Text:", answer);
+    console.log("Arr of answers: ", answerArr);
   } else {
     console.log("No answer selected for the current question.");
   }
@@ -51,6 +62,10 @@ function showPreviousQuestion() {
   }
 
   document.getElementById(`question${currentQuestion}`).classList.add("active");
+
+  // remove the answer from answerArr when back button is pressed
+  answerArr.pop();
+  console.log("Arr of answers: ", answerArr);
 }
 
 function checkAnswer() {
@@ -68,7 +83,6 @@ function checkAnswer() {
 }
 
 function showResults() {
-  checkAnswer();
   document.getElementById("result-container").style.display = "block";
   document.getElementById("result").innerText = score;
 }
