@@ -27,10 +27,21 @@ body {
   display: block;
 }
 
+#summary-pane {
+  height: auto;
+  display: none;
+}
+
 #result-container {
   padding: 20px;
   text-align: center;
   display: none;
+}
+
+#button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
