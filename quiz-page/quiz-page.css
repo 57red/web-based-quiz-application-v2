@@ -10,17 +10,24 @@ body {
 }
 
 #quiz-container {
-  max-width: 600px;
+  max-width: auto;
   background-color: #f4f27e;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  padding: 30px;
 }
 
 .question-container {
-  padding: 20px;
+  padding: 40px 100px;
   text-align: left;
   display: none;
+}
+
+.question-container p {
+  font-size: 20pt;
+  margin-bottom: 35px;
+  max-width: 400px;
 }
 
 .question-container.active {
@@ -45,10 +52,24 @@ body {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 20px;
   margin: 10px;
-  font-size: 16px;
+  font-size: 16pt;
   cursor: pointer;
+
+  border-radius: 25px;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  background-color: #fff5c2;
+}
+
+button:active {
+  color: rgb(255, 255, 255, 0.7);
+  background-color: #3081d0;
 }
 
 #next-btn {
@@ -63,6 +84,49 @@ input {
   cursor: pointer;
 }
 
+label {
+  font-size: 18pt;
+}
+
 .choice {
-  width: auto;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  background-color: #6db9ef;
+  border-radius: 10px;
+}
+
+#summary-pane {
+  padding: 20px;
+}
+
+#summary-header {
+  text-align: center;
+  font-size: 20pt;
+  margin-bottom: 25px;
+}
+
+.summary-question {
+  font-size: 18pt;
+}
+
+.summary-answer {
+  font-size: 16pt;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.submit-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result-header {
+  font-size: 20pt;
+}
+
+#score {
+  font-size: 18pt;
 }

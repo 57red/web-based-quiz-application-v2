@@ -19,6 +19,8 @@ function showNextQuestion() {
     `input[name="q${currentQuestion}"]:checked`
   );
 
+  backBtn.hidden = false;
+
   // name of the answer and question
   let answer = selectedAnswer.id;
   let question = document
@@ -49,7 +51,6 @@ function showNextQuestion() {
 // show previous question
 function showPreviousQuestion() {
   --score;
-
   document
     .getElementById(`question${currentQuestion}`)
     .classList.remove("active");
@@ -90,30 +91,37 @@ function showSummaryPane() {
   flagBtn.hidden = true;
   nextBtn.hidden = true;
 
-  summaryPane.innerHTML = `<h2>Summary</h2>`;
+  summaryPane.innerHTML = `<h1 id="summary-header">Summary</h1>`;
 
   const submitButton = document.createElement("button");
   submitButton.innerHTML = "Submit";
+  submitButton.classList.add("summary-submit-btn");
   submitButton.onclick = function () {
     document.getElementById("summary-pane").style.display = "none";
     showResults();
   };
 
+  const divButton = document.createElement("div");
+  divButton.classList.add("submit-div");
+  divButton.appendChild(submitButton);
+
   questionArr.forEach((question, index) => {
     const questionElement = document.createElement("div");
     questionElement.textContent = question;
+    questionElement.classList.add("summary-question");
     summaryPane.appendChild(questionElement);
 
     // checks if there's answer
     if (answerArr && answerArr[index]) {
       const answerElement = document.createElement("div");
       answerElement.textContent = `Answer: ${answerArr[index]}`;
+      answerElement.classList.add("summary-answer");
       summaryPane.appendChild(answerElement);
     }
   });
 
   // creates submit button
-  summaryPane.appendChild(submitButton);
+  summaryPane.appendChild(divButton);
 }
 
 // show results
