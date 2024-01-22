@@ -13,13 +13,20 @@ let score = 0;
 let answerArr = [];
 let questionArr = [];
 
+backBtn.hidden = true;
+
 // show next question
 function showNextQuestion() {
   const selectedAnswer = document.querySelector(
     `input[name="q${currentQuestion}"]:checked`
   );
 
-  backBtn.hidden = false;
+  // disable back button at question 1
+  if (selectedAnswer) {
+    if (currentQuestion === 1) {
+      backBtn.hidden = false;
+    }
+  }
 
   // name of the answer and question
   let answer = selectedAnswer.id;
@@ -46,6 +53,8 @@ function showNextQuestion() {
       .getElementById(`question${currentQuestion}`)
       .classList.add("active");
   }
+
+  console.log(currentQuestion);
 }
 
 // show previous question
@@ -57,6 +66,12 @@ function showPreviousQuestion() {
 
   currentQuestion--;
 
+  // disable back button at question 1
+  if (currentQuestion === 1) {
+    backBtn.hidden = true;
+  }
+
+  // to avoid negatives
   if (currentQuestion < 1) {
     currentQuestion = 1;
   }
@@ -88,7 +103,7 @@ function checkAnswer() {
 function showSummaryPane() {
   document.getElementById("summary-pane").style.display = "block";
   backBtn.hidden = true;
-  flagBtn.hidden = true;
+  // flagBtn.hidden = true;
   nextBtn.hidden = true;
 
   summaryPane.innerHTML = `<h1 id="summary-header">Summary</h1>`;
