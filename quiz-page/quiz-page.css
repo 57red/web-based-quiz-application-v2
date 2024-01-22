@@ -108,7 +108,9 @@ label {
 
 #summary-header {
   text-align: center;
-  font-size: 20pt;
+  color: #3081d0;
+  font-size: 3rem;
+  margin-top: 25px;
   margin-bottom: 25px;
   font-weight: bolder;
 }
