@@ -39,11 +39,6 @@ body {
   display: block;
 }
 
-#summary-pane {
-  height: auto;
-  display: none;
-}
-
 #result-container {
   padding: 20px;
   text-align: center;
@@ -102,16 +97,20 @@ label {
   border-radius: 10px;
 }
 
-.summary-pane {
-  padding: 20px;
+#summary-pane {
+  display: none;
+  width: auto;
+  height: auto;
+  padding: 50px;
+  background-color: #f4f27e;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #summary-header {
   text-align: center;
   color: #3081d0;
   font-size: 3rem;
-  margin-top: 25px;
-  margin-bottom: 25px;
   font-weight: bolder;
 }
 
@@ -130,6 +129,13 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#result-container {
+  background-color: #f4f27e;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #result-header {

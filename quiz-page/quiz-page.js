@@ -6,6 +6,9 @@ const nextBtn = document.getElementById("next-btn");
 const backBtn = document.getElementById("back-btn");
 const flagBtn = document.getElementById("flag-btn");
 
+// Quiz Container
+const quizContainer = document.getElementById("quiz-container");
+
 let currentQuestion = 1;
 let score = 0;
 
@@ -103,6 +106,8 @@ function checkAnswer() {
 
 // show summary pane
 function showSummaryPane() {
+  quizContainer.style.display = "none";
+
   document.getElementById("summary-pane").style.display = "block";
   backBtn.hidden = true;
   // flagBtn.hidden = true;
@@ -131,7 +136,7 @@ function showSummaryPane() {
     // checks if there's answer
     if (answerArr && answerArr[index]) {
       const answerElement = document.createElement("div");
-      answerElement.textContent = `Answer: ${answerArr[index]}`;
+      answerElement.textContent = `Your Answer: ${answerArr[index]}`;
       answerElement.classList.add("summary-answer");
       summaryPane.appendChild(answerElement);
     }
