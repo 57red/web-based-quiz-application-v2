@@ -15,6 +15,7 @@ body {
 
 #quiz-container {
   max-width: auto;
+  height: auto;
   background-color: #f4f27e;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -98,6 +99,7 @@ label {
 }
 
 #summary-pane {
+  position: relative;
   display: none;
   width: auto;
   height: auto;
@@ -105,9 +107,11 @@ label {
   background-color: #f4f27e;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
 #summary-header {
+  position: fix;
   text-align: center;
   color: #3081d0;
   font-size: 3rem;
@@ -129,6 +133,10 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.summary-submit-btn {
+  background-color: coral;
 }
 
 #result-container {

@@ -9,6 +9,9 @@ const flagBtn = document.getElementById("flag-btn");
 // Quiz Container
 const quizContainer = document.getElementById("quiz-container");
 
+// Quiz Button Section
+const quizBtnSection = document.getElementById("button-section");
+
 let currentQuestion = 1;
 let score = 0;
 
@@ -59,7 +62,7 @@ function showNextQuestion() {
       .classList.add("active");
   }
 
-  console.log(currentQuestion);
+  console.log(score);
 }
 
 // show previous question
@@ -86,7 +89,7 @@ function showPreviousQuestion() {
   // remove the answer from answerArr when back button is pressed
   answerArr.pop();
   questionArr.pop();
-  console.log("Arr; of answers: ", answerArr);
+  console.log(score);
 }
 
 // check answer
@@ -115,6 +118,7 @@ function showSummaryPane() {
 
   summaryPane.innerHTML = `<h1 id="summary-header">Summary</h1>`;
 
+  // summary submit button
   const submitButton = document.createElement("button");
   submitButton.innerHTML = "Submit";
   submitButton.classList.add("summary-submit-btn");
@@ -123,9 +127,33 @@ function showSummaryPane() {
     showResults();
   };
 
+  // summary back to question button
+  const backToQuestionsBtn = document.createElement("button");
+  backToQuestionsBtn.innerHTML = "Back To Questions";
+  backToQuestionsBtn.onclick = function () {
+    summaryPane.style.display = "none";
+    currentQuestion--;
+    score--;
+    answerArr.pop();
+    questionArr.pop();
+
+    quizContainer.style.display = "block";
+    document
+      .getElementById(`question${currentQuestion}`)
+      .classList.add("active");
+
+    nextBtn.style.display = "block";
+    backBtn.style.display = "block";
+
+    console.log(currentQuestion);
+  };
+
+  // summary button container
   const divButton = document.createElement("div");
+
   divButton.classList.add("submit-div");
   divButton.appendChild(submitButton);
+  divButton.appendChild(backToQuestionsBtn);
 
   questionArr.forEach((question, index) => {
     const questionElement = document.createElement("div");
