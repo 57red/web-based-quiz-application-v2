@@ -22,19 +22,21 @@ function showNextQuestion() {
   );
 
   // disable back button at question 1
-  if (selectedAnswer) {
-    if (currentQuestion === 1) {
-      backBtn.hidden = false;
-    }
+
+  if (currentQuestion === 1) {
+    backBtn.hidden = false;
   }
 
-  // name of the answer and question
-  let answer = selectedAnswer.id;
+  if (selectedAnswer) {
+    let answer = selectedAnswer.id;
+    answerArr.push(answer);
+  }
+
+  // to questionArr will display the question @ summary pane
   let question = document
     .getElementById(`question${currentQuestion}`)
     .getElementsByTagName("p")[0].innerText;
 
-  answerArr.push(answer);
   questionArr.push(question);
 
   // checks the answer if it's correct
