@@ -28,7 +28,6 @@ function showNextQuestion() {
   );
 
   // disable back button at question 1
-
   if (currentQuestion === 1) {
     backBtn.hidden = false;
   }
