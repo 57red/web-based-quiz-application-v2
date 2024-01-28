@@ -68,7 +68,16 @@ function showNextQuestion() {
 
 // show previous question
 function showPreviousQuestion() {
-  --score;
+  const selectedAnswer = document.querySelector(
+    `input[name="q${currentQuestion}"]:checked`
+  );
+
+  if (selectedAnswer) {
+    score--;
+  } else if (!selectedAnswer) {
+    score;
+  }
+
   document
     .getElementById(`question${currentQuestion}`)
     .classList.remove("active");
@@ -136,7 +145,7 @@ function showSummaryPane() {
   backToQuestionsBtn.onclick = function () {
     summaryPane.style.display = "none";
     currentQuestion--;
-    score--;
+    // score--;s
     answerArr.pop();
     questionArr.pop();
 
