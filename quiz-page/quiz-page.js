@@ -36,6 +36,8 @@ function showNextQuestion() {
   if (selectedAnswer) {
     let answer = selectedAnswer.id;
     answerArr.push(answer);
+  } else if (!selectedAnswer) {
+    answerArr.push("NO ANSWER");
   }
 
   // to questionArr will display the question @ summary pane
