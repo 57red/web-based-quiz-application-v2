@@ -130,6 +130,8 @@ function showSummaryPane() {
   // summary back to question button
   const backToQuestionsBtn = document.createElement("button");
   backToQuestionsBtn.innerHTML = "Back To Questions";
+
+  // back to questions onclick event
   backToQuestionsBtn.onclick = function () {
     summaryPane.style.display = "none";
     currentQuestion--;
@@ -144,8 +146,6 @@ function showSummaryPane() {
 
     nextBtn.style.display = "block";
     backBtn.style.display = "block";
-
-    console.log(currentQuestion);
   };
 
   // summary button container
