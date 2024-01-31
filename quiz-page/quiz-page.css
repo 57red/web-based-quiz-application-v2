@@ -157,3 +157,28 @@ label {
 #score {
   font-size: 18pt;
 }
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 25px;
+  }
+
+  .question-container {
+    padding: 10px;
+  }
+
+  .question-container p {
+    width: auto;
+    text-align: left;
+  }
+  .summary-answer {
+    margin-bottom: 25px;
+  }
+
+  #result-container #score {
+    font-size: 12.161pt;
+    font-weight: bolder;
+    width: auto;
+  }
+}

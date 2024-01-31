@@ -80,3 +80,14 @@ body {
   color: rgb(255, 255, 255, 0.7);
   background-color: #3081d0;
 }
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .main-container {
+    padding: 10px;
+  }
+}

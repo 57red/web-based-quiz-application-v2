@@ -9,9 +9,6 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 110vh;
-
   background-color: #fff5c2;
 }
 
@@ -22,7 +19,7 @@ body {
   flex-direction: column;
 
   height: auto;
-  width: auto;
+  width: 800px;
   margin-top: 100px;
   margin-bottom: 100px;
   padding: 20px;
@@ -82,4 +79,11 @@ ol li {
 span {
   font-weight: bold;
   font-size: 12.5pt;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 25px;
+  }
 }
