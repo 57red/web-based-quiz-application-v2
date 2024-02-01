@@ -6,7 +6,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff5c2;
+  background-color: #c5fff8;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +18,7 @@ body {
 #quiz-container {
   max-width: auto;
   height: auto;
-  background-color: #f4f27e;
+  background-color: #96efff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -69,7 +71,7 @@ button {
   box-shadow: none;
   cursor: pointer;
 
-  background-color: #6db9ef;
+  background-color: #5fbdff;
 }
 
 button:active {
@@ -98,7 +100,7 @@ label {
   margin-bottom: 10px;
   padding: 10px;
 
-  background-color: #fff5c2;
+  background-color: #c5fff8;
   border-radius: 10px;
 }
 
@@ -108,14 +110,13 @@ label {
   width: auto;
   height: auto;
   padding: 50px;
-  background-color: #f4f27e;
+  background-color: #96efff;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: auto;
 }
 
 #summary-header {
-  position: fix;
   text-align: center;
   color: #3081d0;
   font-size: 3rem;
@@ -144,7 +145,7 @@ label {
 }
 
 #result-container {
-  background-color: #f4f27e;
+  background-color: #96efff;
   padding: 50px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -180,5 +181,9 @@ label {
     font-size: 12.161pt;
     font-weight: bolder;
     width: auto;
+  }
+
+  .submit-div {
+    margin-bottom: 25px;
   }
 }

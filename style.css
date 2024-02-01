@@ -1,4 +1,6 @@
-/* color palette: https://colorhunt.co/palette/fff5c2f4f27e6db9ef3081d0 */
+/* color palette: https://colorhunt.co/palette/fff5c2f4f27e6db9ef3081d0 
+  https://colorhunt.co/palette/c5fff896efff5fbdff7b66ff
+*/
 
 * {
   margin: 0;
@@ -13,31 +15,29 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: #fff5c2;
+  background-color: #c5fff8;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .main-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   margin-top: 100px;
   border-radius: 20px;
 
-  position: relative;
-
-  background-color: #f4f27e;
-
-  box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.5);
+  background-color: #96efff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-section h1 {
-  color: #3081d0;
+  color: #7b66ff;
   font-size: 3rem;
   text-align: center;
 }
@@ -61,7 +61,8 @@ body {
   box-shadow: none;
   cursor: pointer;
 
-  background-color: #6db9ef;
+  background-color: #5fbdff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #play-btn,

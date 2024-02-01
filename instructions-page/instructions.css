@@ -9,7 +9,9 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: #fff5c2;
+  background-color: #c5fff8;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .main-container {
@@ -27,11 +29,9 @@ body {
 
   position: relative;
 
-  background-color: #f4f27e;
+  background-color: #96efff;
 
-  box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-section h1 {
