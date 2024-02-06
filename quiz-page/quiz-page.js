@@ -145,6 +145,7 @@ function showSummaryPane() {
   // back to questions onclick event
   backToQuestionsBtn.onclick = function () {
     summaryPane.style.display = "none";
+    score--;
     currentQuestion--;
     answerArr.pop();
     questionArr.pop();
