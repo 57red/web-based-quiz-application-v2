@@ -181,6 +181,7 @@ label {
   .question-container p {
     width: auto;
     text-align: left;
+    font-size: 1.2rem;
   }
   .summary-answer {
     margin-bottom: 25px;
@@ -194,5 +195,17 @@ label {
 
   .submit-div {
     margin-bottom: 25px;
+  }
+
+  .choice {
+    width: auto;
+  }
+
+  .choice label {
+    font-size: 1rem;
+  }
+
+  #button-section button {
+    font-size: 1rem;
   }
 }
