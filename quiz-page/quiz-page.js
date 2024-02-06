@@ -177,6 +177,11 @@ function showSummaryPane() {
       answerElement.textContent = `Your Answer: ${answerArr[index]}`;
       answerElement.classList.add("summary-answer");
       summaryPane.appendChild(answerElement);
+
+      // Add the "no-answer-summary" class if the answer is "NO ANSWER"
+      if (answerArr[index] === "NO ANSWER") {
+        answerElement.classList.add("no-answer-summary");
+      }
     }
   });
 
