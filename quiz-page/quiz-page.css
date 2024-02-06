@@ -46,12 +46,6 @@ h4 {
   text-align: center;
 }
 
-#result-container {
-  padding: 20px;
-  text-align: center;
-  display: none;
-}
-
 #button-section {
   display: flex;
   justify-content: center;
@@ -145,6 +139,8 @@ label {
 }
 
 #result-container {
+  text-align: center;
+  display: none;
   background-color: #96efff;
   padding: 50px;
   border-radius: 15px;
@@ -157,6 +153,15 @@ label {
 
 #score {
   font-size: 18pt;
+}
+
+#confirmation-pane {
+  text-align: center;
+  display: none;
+  background-color: #96efff;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Media Query for Mobile Devices */

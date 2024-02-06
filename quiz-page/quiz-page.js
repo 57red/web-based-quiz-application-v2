@@ -12,6 +12,11 @@ const quizContainer = document.getElementById("quiz-container");
 // Quiz Button Section
 const quizBtnSection = document.getElementById("button-section");
 
+// Confirmation Pane
+const confirmationPane = document.getElementById("confirmation-pane");
+const confirmYesBtn = document.getElementById("confirm-yes-btn");
+const confirmNoBtn = document.getElementById("confirm-no-btn");
+
 let currentQuestion = 1;
 let score = 0;
 
@@ -62,8 +67,6 @@ function showNextQuestion() {
       .getElementById(`question${currentQuestion}`)
       .classList.add("active");
   }
-
-  console.log(score);
 }
 
 // show previous question
@@ -99,7 +102,6 @@ function showPreviousQuestion() {
   // remove the answer from answerArr when back button is pressed
   answerArr.pop();
   questionArr.pop();
-  console.log(score);
 }
 
 // check answer
@@ -123,7 +125,6 @@ function showSummaryPane() {
 
   document.getElementById("summary-pane").style.display = "block";
   backBtn.hidden = true;
-  // flagBtn.hidden = true;
   nextBtn.hidden = true;
 
   summaryPane.innerHTML = `<h1 id="summary-header">Summary</h1>`;
@@ -134,7 +135,7 @@ function showSummaryPane() {
   submitButton.classList.add("summary-submit-btn");
   submitButton.onclick = function () {
     document.getElementById("summary-pane").style.display = "none";
-    showResults();
+    showConfirmation();
   };
 
   // summary back to question button
@@ -145,7 +146,6 @@ function showSummaryPane() {
   backToQuestionsBtn.onclick = function () {
     summaryPane.style.display = "none";
     currentQuestion--;
-    // score--;s
     answerArr.pop();
     questionArr.pop();
 
@@ -192,4 +192,19 @@ function showResults() {
   document.getElementById("result-container").style.display = "block";
   document.getElementById("result").innerText = score;
   document.getElementById("grade").innerText = grade;
+}
+
+// show confirmation
+function showConfirmation() {
+  confirmationPane.style.display = "block";
+
+  confirmYesBtn.onclick = function () {
+    confirmationPane.style.display = "none";
+    showResults();
+  };
+
+  confirmNoBtn.onclick = function () {
+    confirmationPane.style.display = "none";
+    showSummaryPane();
+  };
 }
