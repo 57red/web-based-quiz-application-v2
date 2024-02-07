@@ -8,41 +8,43 @@
 
 body {
   display: flex;
+  align-items: center;
   justify-content: center;
+  height: 100vh;
   background-color: #c5fff8;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  height: auto;
-  width: 800px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding: 20px;
-  border-radius: 20px;
-
   position: relative;
-
+  width: auto;
+  height: auto;
+  padding: 20px 70px;
   background-color: #96efff;
-
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #5fbdff #96efff;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
 }
 
 .header-section h1 {
   color: #3081d0;
   font-size: 3rem;
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .content-section {
-  margin: 0 50px;
   text-align: left;
 }
 
@@ -52,6 +54,9 @@ ol li {
 }
 
 .button-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 25px;
 }
 
@@ -83,7 +88,7 @@ span {
 
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
-  body {
-    padding: 25px;
+  .main-container {
+    padding: 20px 50px;
   }
 }

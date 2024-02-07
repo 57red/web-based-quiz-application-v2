@@ -108,6 +108,11 @@ label {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: auto;
+
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #5fbdff #96efff;
 }
 
 #summary-header {
@@ -166,6 +171,12 @@ label {
   padding: 50px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#confirm-yes-btn,
+#confirm-no-btn {
+  padding: 20px;
+  width: 80px;
 }
 
 /* Media Query for Mobile Devices */
